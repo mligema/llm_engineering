@@ -1,10 +1,12 @@
 name: llms
 channels:
+  - pytorch
+  - nvidia
   - conda-forge
-  - defaults
 dependencies:
   - python=3.11
   - pip
+  - ipykernel
   - python-dotenv
   - requests
   - numpy
@@ -18,30 +20,37 @@ dependencies:
   - chromadb
   - jupyter-dash
   - pyarrow
+
+  # --- PyTorch (GPU on Pascal) ---
+  - pytorch=2.4.*
+  - torchvision=0.19.*
+  - torchaudio=2.4.*
+  - pytorch-cuda=11.8
+
   - pip:
-    - beautifulsoup4
-    - plotly
-    - transformers
-    - sentence-transformers
-    - datasets==3.6.0
-    - openai
-    - anthropic
-    - google-generativeai
-    - gradio
-    - gensim
-    - modal
-    - ollama
-    - psutil
-    - setuptools
-    - speedtest-cli
-    - langchain
-    - langchain-core
-    - langchain-text-splitters
-    - langchain-openai
-    - langchain-chroma
-    - langchain-community
-    - feedparser
-    - twilio
-    - pydub
-    - protobuf==3.20.2
-    - wandb
+      - beautifulsoup4
+      - plotly
+      - transformers
+      - sentence-transformers
+      - datasets==3.6.0
+      - openai
+      - anthropic
+      - google-generativeai
+      - gradio
+      - gensim
+      - modal
+      - ollama
+      - psutil
+      - setuptools
+      - speedtest-cli
+      - langchain
+      - langchain-core
+      - langchain-text-splitters
+      - langchain-openai
+      - langchain-chroma
+      - langchain-community
+      - feedparser
+      - twilio
+      - pydub
+      - protobuf==3.20.2
+      - wandb
